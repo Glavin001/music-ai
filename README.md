@@ -23,6 +23,10 @@ python main.py <MIDI file path>
 python main.py samples/chopin.mid
 ```
 
+#### Screenshot
+
+![screenshot](screenshots/screenshot1.png)
+
 ## Maintainer
 
 Looking for a new maintainer with Dr. Oore.
