@@ -14,7 +14,13 @@ pip install -r requirements.txt
 ## Usage
 
 ```bash
-python main.py
+python main.py <MIDI file path>
+```
+
+### Example
+
+```bash
+python main.py samples/chopin.mid
 ```
 
 ## Maintainer
