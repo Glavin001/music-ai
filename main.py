@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 '''
 Created on Aug 27, 2012
 
@@ -554,6 +556,7 @@ def getUserInput(
 
 #***************************************** MAIN **********************************************
 
+import sys
 from music21 import *
 from collections import Counter
 import itertools
@@ -570,8 +573,12 @@ from math import sin
 #midiStream.show('text')
 
 # Parse MIDI File
-midiPath = "/Users/glavin/Dropbox/Workspaces/SMU/Dr._Oore/chopin.mid"  # "/Users/glavin/Dropbox/Workspaces/SMU/Dr._Oore/mazurka_2.mid"
-#midiPath = getUserInput("/Users/glavin/Dropbox/Workspaces/SMU/Dr._Oore/mazurka_2.mid")
+if (len(sys.argv) > 1):
+  midiPath = sys.argv[1] # First arguement is the MIDI file path
+else:
+  print "Error: Missing Command-Line Argument for MIDI file path."
+  sys.exit()
+
 '''
 fp = os.path.join(common.getSourceFilePath(), 'midi', 'testPrimitive',  'test05.mid')
 mf = midi.MidiFile()
