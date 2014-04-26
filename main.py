@@ -560,7 +560,7 @@ import sys
 from music21 import *
 from collections import Counter
 import itertools
-#import os
+import os
 import random
 import datetime
 
@@ -579,19 +579,18 @@ else:
   print "Error: Missing Command-Line Argument for MIDI file path."
   sys.exit()
 
-'''
 fp = os.path.join(common.getSourceFilePath(), 'midi', 'testPrimitive',  'test05.mid')
 mf = midi.MidiFile()
 mf.open(midiPath)
 mf.read()
 mf.close()
 midiStream = midi.translate.midiFileToStream(mf)
-midiStream.show()
-'''
-''' # *****************
-midiStream = converter.parseFile(midiPath)
-midiObject = midi.translate.streamToMidiFile(midiStream)
-''' # *******************
+#midiStream.show()
+
+# *****************
+#midiStream = converter.parseFile(midiPath)
+#midiObject = midi.translate.streamToMidiFile(midiStream)
+# *******************
 #print "Printing midiStream.show():"
 #midiStream.show('text')
 
@@ -611,6 +610,8 @@ dataScore = createSampleDataStream(duration.Duration(5),tempo.MetronomeMark(refe
 #dataScore = createSampleDataStream(duration.Duration(4),tempo.MetronomeMark(referent=1.0, number=60.0),meter.TimeSignature('4/4'),0)
 dataScore.show('text')
 #dataScore.show()
+
+dataScore = midiStream
 
 #genScore = createGeneratedStream(duration.Duration(10), metronome = None, timeSig = None, offsetConstant = 0.0, betweenNotes = 0.1)
 #genScore.show('text')
